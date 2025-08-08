@@ -1,0 +1,27 @@
+﻿@page "/contact"
+@using PortfolioEmilio.Components.Layout
+@layout MainLayout
+
+<PageTitle>Contact Me</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-12">
+    <MudPaper Elevation="4" Class="pa-6" Style="border-radius:16px;">
+        <MudText Typo="Typo.h4" GutterBottom="true">Contact Me</MudText>
+        <EditForm Model="@contactModel" OnValidSubmit="HandleValidSubmit">
+            <MudTextField @bind-Value="contactModel.Name" Label="Name" Required="true" RequiredError="Please enter your name" Class="mb-4" />
+            <MudTextField @bind-Value="contactModel.Email" Label="Email" Required="true" RequiredError="Please enter your email" 
+                          Immediate="true" Validation="ValidateEmail" Class="mb-4" />
+            <MudTextField @bind-Value="contactModel.Subject" Label="Subject" Class="mb-4" />
+            <MudTextField @bind-Value="contactModel.Message" Label="Message" Required="true" RequiredError="Please enter a message" 
+                          Lines="4" TextArea="true" Class="mb-4" />
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary">Send</MudButton>
+        </EditForm>
+
+        @if (successMessageVisible)
+        {
+            <MudAlert Severity="Severity.Success" Class="mt-4">
+                Thank you! Your message has been sent.
+            </MudAlert>
+        }
+    </MudPaper>
+</MudContainer>

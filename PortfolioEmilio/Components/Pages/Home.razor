@@ -1,0 +1,74 @@
+﻿@page "/"
+@using PortfolioEmilio.Components.Layout
+
+@layout MainLayout
+
+<PageTitle>Home - Portfolio</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-12">
+    <MudPaper Class="pa-6" Elevation="4" Style="border-radius: 16px;">
+        <MudText Typo="Typo.h3" GutterBottom="true" Align="Align.Center">
+            Welcome to My Developer Portfolio
+        </MudText>
+
+        <MudText Typo="Typo.subtitle1" Align="Align.Center" Class="mb-4">
+            Explore my projects, skills, and experience in software development.
+        </MudText>
+
+        <MudGrid>
+            <MudItem xs="12" md="6">
+                <MudCard Class="mb-6" Style="border-radius: 12px;">
+                    <MudCardMedia Image="images/LogoHDFinal.png" Height="300" />
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">Projects</MudText>
+                        <MudText Typo="Typo.body2">
+                            Discover a variety of projects I've worked on across web and desktop platforms.
+                        </MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" Href="/projects">
+                            View Projects
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+
+            <MudItem xs="12" md="6">
+                <MudCard Class="mb-6" Style="border-radius: 12px;">
+                    <MudCardMedia Image="images/AboutMeHD.jpg" Height="300" />
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">About Me</MudText>
+                        <MudText Typo="Typo.body2">
+                            Learn about my background, interests, and what drives me as a developer.
+                        </MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Filled" Color="Color.Secondary" Href="/about">
+                            About Me
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+
+            <MudItem xs="12" md="6">
+                <MudCard Class="mb-6" Style="border-radius: 12px;">
+                    <MudCardMedia Image="images/ContactMeHD.png" Class="no-crop-image" />
+                    <MudCardContent>
+                        <MudText Typo="Typo.h6">Contact Me</MudText>
+                        <MudText Typo="Typo.body2">
+                            Have a question, project idea, or just want to say hello?<br />
+                            Feel free to reach out! I’m always open to discussing new opportunities, collaborations, or any feedback you might have.<br /><br />
+
+                            Use the form to send me a message — I’ll get back to you as soon as possible.
+                        </MudText>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Filled" Color="Color.Tertiary" Href="/contact">
+                            Contact Me
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+</MudContainer>

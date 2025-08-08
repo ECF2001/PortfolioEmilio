@@ -1,0 +1,95 @@
+﻿@page "/about"
+@layout MainLayout
+@using PortfolioEmilio.Components.Layout
+
+<PageTitle>About Me</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-12">
+    <MudPaper Elevation="4" Class="pa-6" Style="border-radius: 16px;">
+        <MudGrid>
+            <MudItem xs="12" md="4">
+                <MudAvatar Style="height:280px; width:280px;">
+                    <MudImage Src="images/AboutMeHD.jpg" Alt="An image of Emilio Conejo"></MudImage>
+                </MudAvatar>
+            </MudItem>
+
+            <MudItem xs="12" md="8">
+                <MudText Typo="Typo.h4" GutterBottom="true">Emilio Conejo Fernández</MudText>
+                <MudText Typo="Typo.subtitle2" Class="mb-2">Full Stack Web Developer</MudText>
+
+                <MudText Typo="Typo.body1" Class="mb-4">
+                    I'm a software developer with experience in designing and developing modern full-stack applications using the .NET ecosystem.
+                    I specialize in building user-centered interfaces with Blazor and MudBlazor, and in architecting scalable backends using ASP.NET Core and EF Core.
+                </MudText>
+
+                <MudText Typo="Typo.body1" Class="mb-4">
+                    I’m passionate about cloud technologies and have hands-on experience with Microsoft Azure services including App Services, Azure SQL, and Azure Functions.
+                    I follow best practices like SOLID, Clean Architecture, and CI/CD, and thrive in agile environments.
+                </MudText>
+            </MudItem>
+        </MudGrid>
+
+        <MudDivider Class="my-6" />
+
+        <MudText Typo="Typo.h5" GutterBottom="true">Technical Skills</MudText>
+        <MudChipSet T="string" Class="mb-4">
+            <MudChip T="string" Color="Color.Primary">C#</MudChip>
+            <MudChip T="string" Color="Color.Primary">ASP.NET Core</MudChip>
+            <MudChip T="string" Color="Color.Primary">MudBlazor</MudChip>
+            <MudChip T="string" Color="Color.Primary">Azure</MudChip>
+            <MudChip T="string" Color="Color.Primary">Entity Framework</MudChip>
+            <MudChip T="string" Color="Color.Primary">Git</MudChip>
+        </MudChipSet>
+
+        <MudText Typo="Typo.h5" GutterBottom="true">Soft Skills</MudText>
+        <MudChipSet T="string" Class="mb-4">
+            <MudChip T="string" Color="Color.Secondary">Teamwork</MudChip>
+            <MudChip T="string" Color="Color.Secondary">Proactivity</MudChip>
+            <MudChip T="string" Color="Color.Secondary">Responsibility</MudChip>
+            <MudChip T="string" Color="Color.Secondary">Leadership</MudChip>
+            <MudChip T="string" Color="Color.Secondary">Stress Management</MudChip>
+            <MudChip T="string" Color="Color.Secondary">Continuous Learning</MudChip>
+        </MudChipSet>
+
+        <MudDivider Class="my-6" />
+
+        <MudText Typo="Typo.h5" GutterBottom="true">Education</MudText>
+        <MudList T="string" Dense="true">
+            <MudListItem T="string">
+                <MudText Typo="Typo.body1">Bachelor’s in Software Engineering – Universidad Cenfotec (2024–Present)</MudText>
+            </MudListItem>
+            <MudListItem>
+                <MudText Typo="Typo.body1">International Baccalaureate Diploma – Yorkin School (2019)</MudText>
+            </MudListItem>
+        </MudList>
+
+        <MudDivider Class="my-6" />
+
+        <MudText Typo="Typo.h5" GutterBottom="true">Certifications</MudText>
+        <MudList T="string" Dense="true">
+            <MudListItem>
+                <MudText Typo="Typo.body1">Microsoft Certified: Azure Fundamentals (2025) – Credential ID: 921A6469DDC58716</MudText>
+            </MudListItem>
+        </MudList>
+
+        <MudDivider Class="my-6" />
+        
+        <MudText Typo="Typo.h5" GutterBottom="true">Interests</MudText>
+        <MudChipSet T="string" Class="mb-4">
+            <MudChip T="string" Color="Color.Tertiary">Reading Tech And Fiction</MudChip>
+            <MudChip T="string" Color="Color.Tertiary">Cooking</MudChip>
+            <MudChip T="string" Color="Color.Tertiary">Learning</MudChip>
+            <MudChip T="string" Color="Color.Tertiary">Magic The Gathering</MudChip>
+            <MudChip T="string" Color="Color.Tertiary">Traveling</MudChip>
+        </MudChipSet>
+
+        <MudDivider Class="my-6" />
+
+        <MudText Typo="Typo.h5" GutterBottom="true">Languages</MudText>
+        <MudChipSet T="string">
+            <MudChip T="string" Color="Color.Info">Spanish – Native</MudChip>
+            <MudChip T="string" Color="Color.Info">English – Advanced</MudChip>
+        </MudChipSet>
+    </MudPaper>
+</MudContainer>
+
