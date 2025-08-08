@@ -1,17 +1,35 @@
 ﻿@using MudBlazor
 @inherits LayoutComponentBase
 
-<MudThemeProvider/>
+<MudThemeProvider Theme="@MyCustomTheme"/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
-<MudLayout>
+<MudLayout Style="min-height: 100vh; display: flex; flex-direction: column;">
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu"
                        Color="Color.Inherit"
                        Edge="Edge.Start"
                        OnClick="DrawerToggle" />
-        Fullstack Software Developer
+        Emilio Conejo Software Developer
+
+        <MudSpacer />
+
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   OnClick="ShowTranslateTip"
+                   Class="me-2">
+            🌐 Translate
+        </MudButton>
+
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   Href="Files/EmilioConejoCV.pdf"
+                   Target="_blank"
+                   Download>
+            <MudIcon Icon="@Icons.Material.Filled.Download" Class="me-1" />
+            Download CV
+        </MudButton>
     </MudAppBar>
 
     <MudDrawer @bind-Open="_isDrawerOpen"
@@ -21,16 +39,57 @@
         <NavMenu />
     </MudDrawer>
 
-    <MudMainContent>
+    <MudMainContent Style="flex: 1;">
         @Body
     </MudMainContent>
+    <br/><br/><br/>
+    <!-- Footer moved outside MudMainContent -->
+    <MudPaper Elevation="0" 
+              Class="pa-4 d-flex align-center justify-space-between" 
+              Style="background-color: #f46434; margin: 0; border-radius: 0;">
+        <div>
+            © @DateTime.Now.Year Emilio Conejo Software Developer
+        </div>
+        <div>
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Default" Href="#" />
+            <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Default" Href="#" />
+            <MudIconButton Icon="@Icons.Material.Filled.Email" Color="Color.Default" Href="mailto:your-email@example.com" />
+        </div>
+    </MudPaper>
 </MudLayout>
 
 @code {
+    private readonly MudTheme MyCustomTheme = new MudTheme
+    {
+        PaletteLight = new PaletteLight
+        {
+            Primary = "#345c74",         // Blue-Gray
+            Secondary = "#f46434",      // Coral / Orange
+            Tertiary = "#d4ecf4", 
+            Background = "#345c74",      // Light Gray
+            Surface = "#2c2c33",
+            AppbarBackground = "#f46434", // Dark Gray
+            DrawerBackground = "#d4ecf4",
+            TextPrimary = "#FFFFFF", // White
+            TextSecondary = "#5B7C8D"
+        },
+        LayoutProperties = new LayoutProperties
+        {
+            DefaultBorderRadius = "8px"
+        }
+    };
+    
     private bool _isDrawerOpen = false;
 
     private void DrawerToggle()
     {
         _isDrawerOpen = !_isDrawerOpen;
+    }
+    
+    [Inject] ISnackbar Snackbar { get; set; }
+
+    private void ShowTranslateTip()
+    {
+        Snackbar.Add("🌐 Tip: Use your browser's translate option to view this page in other language.", Severity.Info);
     }
 }

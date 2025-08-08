@@ -14,4 +14,8 @@
       <None Include="wwwroot\Images\LogoHDFinal.png" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\Files\" />
+    </ItemGroup>
+
 </Project>
