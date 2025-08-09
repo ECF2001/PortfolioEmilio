@@ -51,14 +51,18 @@
             © @DateTime.Now.Year Emilio Conejo Software Developer
         </div>
         <div>
-            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Default" Href="#" />
-            <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Default" Href="#" />
-            <MudIconButton Icon="@Icons.Material.Filled.Email" Color="Color.Default" Href="mailto:your-email@example.com" />
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@ScrollToTop">
+                ↑ Top
+            </MudButton>
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Default" Href="#"/>
+            <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Default" Href="#"/>
+            <MudIconButton Icon="@Icons.Material.Filled.Email" Color="Color.Default" Href="mailto:your-email@example.com"/>
         </div>
     </MudPaper>
 </MudLayout>
 
 @code {
+    [Inject] IJSRuntime JS { get; set; }
     private readonly MudTheme MyCustomTheme = new MudTheme
     {
         PaletteLight = new PaletteLight
@@ -79,6 +83,14 @@
         }
     };
     
+    
+    private async Task ScrollToTop()
+    {
+        Console.WriteLine("ScrollToTop button clicked!");
+        await JS.InvokeVoidAsync("scrollToTop");
+    }
+
+    
     private bool _isDrawerOpen = false;
 
     private void DrawerToggle()
@@ -93,3 +105,8 @@
         Snackbar.Add("🌐 Tip: Use your browser's translate option to view this page in other language.", Severity.Info);
     }
 }
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>

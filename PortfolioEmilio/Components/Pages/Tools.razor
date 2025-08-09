@@ -1,0 +1,226 @@
+﻿@page "/tools"
+@using MudBlazor
+
+<MudContainer Class="mt-4">
+
+    <MudText Typo="Typo.h4" Class="mb-2">🛠 Tools & Technologies</MudText>
+    <MudText Typo="Typo.subtitle1" Class="mb-4">
+        A collection of technologies, frameworks, and tools I use in my work.
+    </MudText>
+
+    <MudCarousel TData="object"
+                 Class="mb-4 custom-carousel"
+                 AutoCycle="true"
+                 AutoCycleTime="@(TimeSpan.FromSeconds(30))"
+                 ShowArrows="true"
+                 ShowBullets="true"
+                 BulletsColor="Color.Primary">
+
+        <MudCarouselItem>
+            <MudCard Class="d-flex flex-column justify-center align-center pa-4 tool-card" Elevation="25">
+                <MudCardMedia Image="/Files/Images/DotNetHD.png" Alt=".NET" Class="carousel-image" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h5" Align="Align.Center" Class="mt-3 mb-2">.NET</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center" Class="mt-1 mb-3">
+                        A powerful framework for building scalable, high-performance applications across web, desktop, and mobile.
+                    </MudText>
+                    <MudChipSet T="string">
+                        <MudChip Color="Color.Primary" Size="Size.Small">C#</MudChip>
+                        <MudChip Color="Color.Secondary" Size="Size.Small">Cross-platform</MudChip>
+                        <MudChip Color="Color.Primary" Size="Size.Small">Open Source</MudChip>
+                    </MudChipSet>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
+        <MudCarouselItem>
+            <MudCard Class="d-flex flex-column justify-center align-center pa-4 tool-card" Elevation="25">
+                <MudCardMedia Image="/Files/Images/BlazorHD.png" Alt="Blazor" Class="carousel-image" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h5" Align="Align.Center" Class="mt-3 mb-2">Blazor</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center" Class="mt-1 mb-3">
+                        A modern framework for building interactive web UIs using C# instead of JavaScript.
+                    </MudText>
+                    <MudChipSet T="string">
+                        <MudChip Color="Color.Primary" Size="Size.Small">WebAssembly</MudChip>
+                        <MudChip Color="Color.Secondary" Size="Size.Small">SPA</MudChip>
+                        <MudChip Color="Color.Primary" Size="Size.Small">Component-based</MudChip>
+                    </MudChipSet>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
+        <MudCarouselItem>
+            <MudCard Class="d-flex flex-column justify-center align-center pa-4 tool-card" Elevation="25">
+                <MudCardMedia Image="/Files/Images/AzureHD.png" Alt="Azure"/>
+                <MudCardContent>
+                    <MudText Typo="Typo.h5" Align="Align.Center" Class="mt-3 mb-2">Microsoft Azure</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center" Class="mt-1 mb-3">
+                        Cloud services for hosting, databases, AI, and scalable application infrastructure.
+                    </MudText>
+                    <MudChipSet T="string">
+                        <MudChip Color="Color.Primary" Size="Size.Small">Cloud Computing</MudChip>
+                        <MudChip Color="Color.Secondary" Size="Size.Small">AI Services</MudChip>
+                        <MudChip Color="Color.Primary" Size="Size.Small">DevOps</MudChip>
+                    </MudChipSet>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
+        <MudCarouselItem>
+            <MudCard Class="d-flex flex-column justify-center align-center pa-4 tool-card" Elevation="25">
+                <MudCardMedia Image="/Files/Images/RaspberryPiHD.png" Alt="Raspberry Pi" Class="carousel-image" />
+                <MudCardContent>
+                    <MudText Typo="Typo.h5" Align="Align.Center" Class="mt-3 mb-2">Raspberry Pi</MudText>
+                    <MudText Typo="Typo.body1" Align="Align.Center" Class="mt-1 mb-3">
+                        A compact, versatile computer for IoT projects, automation, and prototyping.
+                    </MudText>
+                    <MudChipSet T="string">
+                        <MudChip Color="Color.Primary" Size="Size.Small">IoT</MudChip>
+                        <MudChip Color="Color.Secondary" Size="Size.Small">Linux</MudChip>
+                        <MudChip Color="Color.Primary" Size="Size.Small">Hardware</MudChip>
+                    </MudChipSet>
+                </MudCardContent>
+            </MudCard>
+        </MudCarouselItem>
+
+    </MudCarousel>
+    
+    <MudText Typo="Typo.h5" Class="mt-6 mb-3">Additional Technologies</MudText>
+    <MudGrid Spacing="3">
+        <MudItem xs="12" sm="6" md="4" lg="3">
+            <MudCard Class="pa-4 tech-card" Elevation="10">
+                <MudCardContent Class="text-center">
+                    <MudIcon Icon="@Icons.Custom.Brands.GitHub" Size="Size.Large" Class="mb-2" />
+                    <MudText Typo="Typo.h6">Git & GitHub</MudText>
+                    <MudText Typo="Typo.body2" Class="mt-1">Version control and collaboration</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="12" sm="6" md="4" lg="3">
+            <MudCard Class="pa-4 tech-card" Elevation="10">
+                <MudCardContent Class="text-center">
+                    <MudIcon Icon="@Icons.Material.Filled.Storage" Size="Size.Large" Class="mb-2" />
+                    <MudText Typo="Typo.h6">SQL Server</MudText>
+                    <MudText Typo="Typo.body2" Class="mt-1">Relational database management</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="12" sm="6" md="4" lg="3">
+            <MudCard Class="pa-4 tech-card" Elevation="10">
+                <MudCardContent Class="text-center">
+                    <MudIcon Icon="@Icons.Material.Filled.Api" Size="Size.Large" Class="mb-2" />
+                    <MudText Typo="Typo.h6">REST APIs</MudText>
+                    <MudText Typo="Typo.body2" Class="mt-1">Web service development</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="12" sm="6" md="4" lg="3">
+            <MudCard Class="pa-4 tech-card" Elevation="10">
+                <MudCardContent Class="text-center">
+                    <MudIcon Icon="@Icons.Material.Filled.IntegrationInstructions" Size="Size.Large" Class="mb-2" />
+                    <MudText Typo="Typo.h6">Docker</MudText>
+                    <MudText Typo="Typo.body2" Class="mt-1">Containerization platform</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+    
+    <MudText Typo="Typo.h5" Class="mt-6 mb-3">Proficiency Levels</MudText>
+    <MudGrid Spacing="3">
+        <MudItem xs="12" md="6">
+            <MudCard Class="pa-4" Elevation="5">
+                <MudCardContent>
+                    <MudText Typo="Typo.h6" Class="mb-3">Backend Development</MudText>
+                    <MudProgressLinear Color="Color.Primary" Size="Size.Medium" Value="90" Class="mb-2" />
+                    <MudText Typo="Typo.caption">C# / .NET - 90%</MudText>
+
+                    <MudProgressLinear Color="Color.Secondary" Size="Size.Medium" Value="85" Class="mb-2 mt-3" />
+                    <MudText Typo="Typo.caption">Database Design - 85%</MudText>
+
+                    <MudProgressLinear Color="Color.Tertiary" Size="Size.Medium" Value="80" Class="mb-2 mt-3" />
+                    <MudText Typo="Typo.caption">API Development - 80%</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem xs="12" md="6">
+            <MudCard Class="pa-4" Elevation="5">
+                <MudCardContent>
+                    <MudText Typo="Typo.h6" Class="mb-3">Frontend & Cloud</MudText>
+                    <MudProgressLinear Color="Color.Info" Size="Size.Medium" Value="75" Class="mb-2" />
+                    <MudText Typo="Typo.caption">Blazor - 75%</MudText>
+
+                    <MudProgressLinear Color="Color.Success" Size="Size.Medium" Value="70" Class="mb-2 mt-3" />
+                    <MudText Typo="Typo.caption">Azure Services - 70%</MudText>
+
+                    <MudProgressLinear Color="Color.Warning" Size="Size.Medium" Value="65" Class="mb-2 mt-3" />
+                    <MudText Typo="Typo.caption">DevOps - 65%</MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+</MudContainer>
+
+<style>
+    .custom-carousel {
+        height: 700px !important;
+    }
+
+    .custom-carousel .mud-carousel-container,
+    .custom-carousel .mud-carousel-item {
+        height: 100% !important;
+    }
+
+    .tool-card {
+        height: 100%;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 16px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .carousel-image {
+        max-height: 300px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .tech-card {
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        border-radius: 12px;
+    }
+
+    .tech-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .mud-chip-set {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .mud-progress-linear {
+        border-radius: 4px;
+        height: 8px;
+    }
+    
+    .custom-carousel {
+        height: 600px !important;
+    }
+
+    .tool-card {
+        max-width: 90%;
+    }
+</style>
